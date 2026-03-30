@@ -1,5 +1,5 @@
 {
-  "name": "@orbitkit/utils",
+  "name": "@mouthshipkit/utils",
   "version": "0.4.3",
   "private": true,
   "description": "Common utilities for OrbitKit",
@@ -25,7 +25,7 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@orbitkit/eslint": "workspace:^",
-    "@orbitkit/tsconfig": "workspace:^"
+    "@mouthshipkit/eslint": "workspace:^",
+    "@mouthshipkit/tsconfig": "workspace:^"
   }
 }

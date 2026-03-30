@@ -1,5 +1,5 @@
 {
-  "name": "@orbitkit/auth",
+  "name": "@mouthshipkit/auth",
   "version": "0.4.3",
   "private": true,
   "description": "Auth package for OrbitKit",
@@ -34,21 +34,21 @@
   },
   "dependencies": {
     "@lucia-auth/adapter-drizzle": "^1.0.0",
-    "@orbitkit/db": "workspace:^",
-    "@orbitkit/env": "workspace:^",
-    "@orbitkit/utils": "workspace:^",
     "arctic": "^1.9.2",
     "lucia": "^3.2.2",
     "next": "14.2.35",
     "oslo": "^1.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@mouthshipkit/db": "workspace:^",
+    "@mouthshipkit/env": "workspace:^",
+    "@mouthshipkit/utils": "workspace:^"
   },
   "devDependencies": {
-    "@orbitkit/eslint": "workspace:^",
-    "@orbitkit/tsconfig": "workspace:^",
     "@types/react": "^18.3.28",
-    "@types/react-dom": "^18.3.7"
+    "@types/react-dom": "^18.3.7",
+    "@mouthshipkit/eslint": "workspace:^",
+    "@mouthshipkit/tsconfig": "workspace:^"
   }
 }

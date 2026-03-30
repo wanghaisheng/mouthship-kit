@@ -1,5 +1,5 @@
 {
-  "name": "@orbitkit/storybook",
+  "name": "@mouthshipkit/storybook",
   "version": "0.4.3",
   "private": true,
   "description": "A package to share Storybook configuration preset for the workspace",
@@ -33,8 +33,6 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@orbitkit/assets": "workspace:^",
-    "@orbitkit/utils": "workspace:^",
     "@radix-ui/colors": "^3.0.0",
     "@storybook/addon-a11y": "^8.2.10",
     "@storybook/addon-essentials": "^8.2.10",
@@ -50,12 +48,14 @@
     "@storybook/types": "^8.2.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^8.2.10"
+    "storybook": "^8.2.10",
+    "@mouthshipkit/assets": "workspace:^",
+    "@mouthshipkit/utils": "workspace:^"
   },
   "devDependencies": {
-    "@orbitkit/eslint": "workspace:^",
-    "@orbitkit/tsconfig": "workspace:^",
     "@types/react": "^18.3.28",
-    "@types/react-dom": "^18.3.7"
+    "@types/react-dom": "^18.3.7",
+    "@mouthshipkit/eslint": "workspace:^",
+    "@mouthshipkit/tsconfig": "workspace:^"
   }
 }

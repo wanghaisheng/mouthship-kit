@@ -1,5 +1,5 @@
 {
-  "name": "@orbitkit/ui",
+  "name": "@mouthshipkit/ui",
   "version": "0.4.3",
   "private": true,
   "description": "OrbitKit UI Design System Components Library",
@@ -78,12 +78,6 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@orbitkit/assets": "workspace:^",
-    "@orbitkit/eslint": "workspace:^",
-    "@orbitkit/storybook": "workspace:^",
-    "@orbitkit/tailwind": "workspace:^",
-    "@orbitkit/tsconfig": "workspace:^",
-    "@orbitkit/vite": "workspace:^",
     "@storybook/react": "^8.2.10",
     "@storybook/test": "^8.2.10",
     "@types/react": "^18.3.28",
@@ -97,6 +91,12 @@
     "tailwindcss": "^3.4.19",
     "vite": "^5.4.21",
     "vite-plugin-dts": "^4.1.1",
-    "vite-plugin-external": "^4.3.1"
+    "vite-plugin-external": "^4.3.1",
+    "@mouthshipkit/assets": "workspace:^",
+    "@mouthshipkit/eslint": "workspace:^",
+    "@mouthshipkit/storybook": "workspace:^",
+    "@mouthshipkit/tailwind": "workspace:^",
+    "@mouthshipkit/tsconfig": "workspace:^",
+    "@mouthshipkit/vite": "workspace:^"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@orbitkit/env",
+  "name": "@mouthshipkit/env",
   "version": "0.4.3",
   "private": true,
   "description": "A package to define environment variables for apps in the workspace using t3 env",
@@ -24,7 +24,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@orbitkit/eslint": "workspace:^",
-    "@orbitkit/tsconfig": "workspace:^"
+    "@mouthshipkit/eslint": "workspace:^",
+    "@mouthshipkit/tsconfig": "workspace:^"
   }
 }

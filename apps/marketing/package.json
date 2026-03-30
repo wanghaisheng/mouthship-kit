@@ -1,5 +1,5 @@
 {
-  "name": "@orbitkit/marketing",
+  "name": "@mouthshipkit/marketing",
   "version": "0.4.3",
   "private": true,
   "description": "Marketing website for OrbitKit",
@@ -18,16 +18,16 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
-    "@orbitkit/assets": "workspace:^",
-    "@orbitkit/env": "workspace:^",
-    "@orbitkit/ui": "workspace:^",
     "@t3-oss/env-core": "^0.11.1",
     "@total-typescript/ts-reset": "^0.6.1",
     "astro": "^4.15.12",
     "posthog-js": "^1.160.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@mouthshipkit/assets": "workspace:^",
+    "@mouthshipkit/env": "workspace:^",
+    "@mouthshipkit/ui": "workspace:^"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
@@ -35,9 +35,6 @@
     "@astrojs/react": "^3.6.3",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.5",
-    "@orbitkit/eslint": "workspace:^",
-    "@orbitkit/tailwind": "workspace:^",
-    "@orbitkit/tsconfig": "workspace:^",
     "@playwright/test": "^1.46.1",
     "@sentry/astro": "^8.27.0",
     "@types/react": "^18.3.28",
@@ -45,6 +42,9 @@
     "autoprefixer": "^10.4.27",
     "dotenv": "^16.4.7",
     "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.19"
+    "tailwindcss": "^3.4.19",
+    "@mouthshipkit/eslint": "workspace:^",
+    "@mouthshipkit/tailwind": "workspace:^",
+    "@mouthshipkit/tsconfig": "workspace:^"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@orbitkit/api",
+  "name": "@mouthshipkit/api",
   "version": "0.4.3",
   "private": true,
   "description": "A tRPC API package used in the web application",
@@ -21,16 +21,16 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@orbitkit/auth": "workspace:^",
-    "@orbitkit/db": "workspace:^",
-    "@orbitkit/env": "workspace:^",
-    "@orbitkit/utils": "workspace:^",
     "@trpc/server": "next",
     "superjson": "^2.2.6",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@mouthshipkit/auth": "workspace:^",
+    "@mouthshipkit/db": "workspace:^",
+    "@mouthshipkit/env": "workspace:^",
+    "@mouthshipkit/utils": "workspace:^"
   },
   "devDependencies": {
-    "@orbitkit/eslint": "workspace:^",
-    "@orbitkit/tsconfig": "workspace:^"
+    "@mouthshipkit/eslint": "workspace:^",
+    "@mouthshipkit/tsconfig": "workspace:^"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@orbitkit/eslint",
+  "name": "@mouthshipkit/eslint",
   "version": "0.4.3",
   "private": true,
   "description": "A package to share ESLint configurations in workspace",
@@ -37,9 +37,9 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.35",
-    "@orbitkit/tsconfig": "workspace:^",
     "@types/eslint-config-prettier": "^6.11.3",
     "@typescript-eslint/utils": "^8.4.0",
-    "eslint-plugin-storybook": "^0.8.0"
+    "eslint-plugin-storybook": "^0.8.0",
+    "@mouthshipkit/tsconfig": "workspace:^"
   }
 }

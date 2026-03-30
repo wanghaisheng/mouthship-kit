@@ -1,5 +1,5 @@
 {
-  "name": "@orbitkit/core",
+  "name": "@mouthshipkit/core",
   "version": "0.4.3",
   "private": true,
   "description": "Core package for business logic",
@@ -21,7 +21,7 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@orbitkit/eslint": "workspace:^",
-    "@orbitkit/tsconfig": "workspace:^"
+    "@mouthshipkit/eslint": "workspace:^",
+    "@mouthshipkit/tsconfig": "workspace:^"
   }
 }
