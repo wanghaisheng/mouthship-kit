@@ -21,19 +21,21 @@ To contribute to this project, follow these steps:
 bun: ">=1.1.26"
 ```
 
+**Note:** While the project is configured for pnpm, bun version 1.1.26+ is still required for compatibility with certain build tools.
+
 ### Setting up your local repo
 
-Orbitkit uses bun workspaces, so you should **always run `bun install` from the top-level project directory**. Running `bun install` in the top-level project root will install dependencies for `Orbitkit`, and every package in the repo.
+MouthShipKit uses pnpm workspaces, so you should **always run `pnpm install` from the top-level project directory**. Running `pnpm install` in the top-level project root will install dependencies for `MouthShipKit`, and every package in the repo.
 
 ```shell
 git clone && cd ...
-bun install
-bun turbo build
+pnpm install
+pnpm turbo build
 ```
 
 ### Setting up environment variables
 
-Checkout the `.env.example` file inside the `apps/web` directory for the environment variables you need to get the project running. You should create an UploadThing and Neon DB accounts and copy the environment variables from their dashboard to a `.env.local` file in `apps/web`.
+Checkout the `.env.example` file inside the `apps/web` directory for the environment variables you need to get the project running. You should create an UploadThing and SQLite DB accounts and copy the environment variables from their dashboard to a `.env.local` file in `apps/web`.
 
 You will also need to create a GitHub Oauth token as well as for Google authentication as well.
 
@@ -41,7 +43,7 @@ You will also need to create a GitHub Oauth token as well as for Google authenti
 
 To get started, create a codespace for this repository by clicking this 👇
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ixahmedxi/orbitkit)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/wanghaisheng/mouthship-kit)
 
 Your new codespace will open in a web-based version of Visual Studio Code. All development dependencies will be preinstalled, and the tests will run automatically ensuring you've got a green base from which to start working.
 
@@ -49,36 +51,36 @@ Your new codespace will open in a web-based version of Visual Studio Code. All d
 
 ```shell
 # Dev
-bun turbo dev
+pnpm turbo dev
 
 # Build
-bun turbo build
+pnpm turbo build
 
 # Typecheck
-bun turbo typecheck
+pnpm turbo typecheck
 
 # Lint
-bun turbo lint
+pnpm turbo lint
 
 # Storybook
-bun turbo storybook
+pnpm turbo storybook
 
 # Start apps in production mode
-bun turbo start
+pnpm turbo start
 ```
 
-If you're familiar with turborepo / bun workspaces, running stuff around this repo will be easy to figure out.
+If you're familiar with turborepo / pnpm workspaces, running stuff around this repo will be easy to figure out.
 
 ### Other useful commands
 
 ```shell
 # auto-format the entire project
-bun run format
+pnpm run format
 ```
 
 ```shell
 # lint the project
-bun run lint
+pnpm run lint
 ```
 
 ## Code Style Guidelines
