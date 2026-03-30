@@ -1,8 +1,8 @@
-import { pgTable, primaryKey, text } from 'drizzle-orm/pg-core'
+import { sqliteTable, primaryKey, text } from 'drizzle-orm/sqlite-core'
 
-import { userTable } from '.'
+import { userTable } from './user'
 
-export const oauthAccountTable = pgTable(
+export const oauthAccountTable = sqliteTable(
   'oauth_account',
   {
     providerId: text('provider_id').notNull(),

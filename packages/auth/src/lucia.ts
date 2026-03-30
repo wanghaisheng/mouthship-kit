@@ -1,11 +1,11 @@
-import { DrizzlePostgreSQLAdapter } from '@lucia-auth/adapter-drizzle'
+import { DrizzleSQLiteAdapter } from '@lucia-auth/adapter-drizzle'
 import { Lucia } from 'lucia'
 
 import { db } from '@orbitkit/db'
 import { sessionTable, userTable } from '@orbitkit/db/schema'
 import { env } from '@orbitkit/env/web/server'
 
-const adapter = new DrizzlePostgreSQLAdapter(db, sessionTable, userTable)
+const adapter = new DrizzleSQLiteAdapter(db, sessionTable, userTable)
 
 export const lucia = new Lucia(adapter, {
   sessionCookie: {

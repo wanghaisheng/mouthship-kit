@@ -33,13 +33,13 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@lucia-auth/adapter-drizzle": "^1.1.0",
+    "@lucia-auth/adapter-drizzle": "^1.0.0",
     "@orbitkit/db": "workspace:^",
     "@orbitkit/env": "workspace:^",
     "@orbitkit/utils": "workspace:^",
     "arctic": "^1.9.2",
     "lucia": "^3.2.2",
-    "next": "14.2.7",
+    "next": "14.2.35",
     "oslo": "^1.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

@@ -2,6 +2,7 @@ import { cookies } from 'next/headers'
 
 import { generateState, GitHub, OAuth2RequestError } from 'arctic'
 import { generateId } from 'lucia'
+import { and, eq } from 'drizzle-orm'
 
 import { db } from '@orbitkit/db'
 import { oauthAccountTable, userTable } from '@orbitkit/db/schema'
@@ -90,16 +91,15 @@ export async function validateGithubCallback(
       )
     }
 
-    const existingUser = await db.query.oauthAccountTable.findFirst({
-      where: (table, { and, eq }) =>
-        and(
-          eq(table.providerId, 'github'),
-          eq(table.providerUserId, githubUser.id),
-        ),
-    })
+    const existingUser = await db.select().from(oauthAccountTable).where(
+      and(
+        eq(oauthAccountTable.providerId, 'github'),
+        eq(oauthAccountTable.providerUserId, githubUser.id),
+      ),
+    ).leftJoin(userTable, eq(oauthAccountTable.userId, userTable.id)).get()
 
     if (existingUser) {
-      const session = await lucia.createSession(existingUser.userId, {})
+      const session = await lucia.createSession(existingUser.oauth_account.userId, {})
       const sessionCookie = lucia.createSessionCookie(session.id)
       cookies().set(
         sessionCookie.name,

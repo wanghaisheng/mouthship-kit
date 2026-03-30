@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import { generateState, Google, OAuth2RequestError } from 'arctic'
 import { generateId } from 'lucia'
 import { z } from 'zod'
+import { and, eq } from 'drizzle-orm'
 
 import { db } from '@orbitkit/db'
 import { oauthAccountTable, userTable } from '@orbitkit/db/schema'
@@ -35,7 +36,7 @@ export async function createGoogleAuthorizationURL(): Promise<Response> {
   }
 
   const state = generateState()
-  const url = await google.createAuthorizationURL(state, env.AUTH_SECRET, {
+  const url = await google.createAuthorizationURL(state, env.AUTH_SECRET || 'default-secret', {
     scopes: ['profile', 'email'],
   })
 
@@ -82,7 +83,7 @@ export async function validateGoogleCallback(
   }
 
   try {
-    const tokens = await google.validateAuthorizationCode(code, env.AUTH_SECRET)
+    const tokens = await google.validateAuthorizationCode(code, env.AUTH_SECRET || 'default-secret')
 
     const googleUserResponse = await fetch(
       'https://openidconnect.googleapis.com/v1/userinfo',
@@ -102,13 +103,12 @@ export async function validateGoogleCallback(
 
     const { sub, email, picture, name } = parsedRes.data
 
-    const existingUser = await db.query.oauthAccountTable.findFirst({
-      where: (table, { and, eq }) =>
-        and(eq(table.providerId, 'google'), eq(table.providerUserId, sub)),
-    })
+    const existingUser = await db.select().from(oauthAccountTable).where(
+      and(eq(oauthAccountTable.providerId, 'google'), eq(oauthAccountTable.providerUserId, sub))
+    ).leftJoin(userTable, eq(oauthAccountTable.userId, userTable.id)).get()
 
     if (existingUser) {
-      const session = await lucia.createSession(existingUser.userId, {})
+      const session = await lucia.createSession(existingUser.oauth_account.userId, {})
       const sessionCookie = lucia.createSessionCookie(session.id)
       cookies().set(
         sessionCookie.name,
