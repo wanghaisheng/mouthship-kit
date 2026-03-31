@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro'
+// Note: These imports will be available once dependencies are installed
+// import { auth } from '@mouthshipkit/auth'
+// import { env } from '@mouthshipkit/env/web/server'
+
+// Get URL parameters
+const url = Astro.url
+const searchParams = url.searchParams
+const error = searchParams.get('error')
+const logout = searchParams.get('logout')
+
+// Mock environment variables for now - will be replaced with real env
+const googleAuthIsEnabled = process.env.AUTH_GOOGLE_ID !== undefined && process.env.AUTH_GOOGLE_SECRET !== undefined
+const githubAuthIsEnabled = process.env.AUTH_GITHUB_SECRET !== undefined && process.env.AUTH_GITHUB_ID !== undefined
+
+// Mock auth check - will be replaced with real auth
+const user = null // await auth()
+
+// Redirect if already authenticated
+if (user) {
+  return Astro.redirect('/')
+}
+---
+
+<Layout title="Login - Mouthship Kit">
+  <main class="container mx-auto flex flex-col p-6">
+    <h1 class="text-2xl font-bold mb-6">Login to Mouthship Kit</h1>
+    
+    {logout && (
+      <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded">
+        <p class="text-blue-800">✅ You have been successfully logged out.</p>
+      </div>
+    )}
+    
+    {error && (
+      <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded">
+        <p class="text-red-800">❌ Authentication failed: {error}</p>
+      </div>
+    )}
+    
+    <div class="space-y-4">
+      {githubAuthIsEnabled && (
+        <a 
+          href="/login/github" 
+          class="block px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-center"
+        >
+          Sign in with GitHub
+        </a>
+      )}
+      
+      {googleAuthIsEnabled && (
+        <a 
+          href="/login/google" 
+          class="block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center"
+        >
+          Sign in with Google
+        </a>
+      )}
+      
+      {!githubAuthIsEnabled && !googleAuthIsEnabled && (
+        <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <p class="text-yellow-800">
+            ⚠️ Authentication environment variables are not configured.
+          </p>
+          <p class="text-sm text-yellow-600 mt-2">
+            Please configure AUTH_GOOGLE_ID/AUTH_GOOGLE_SECRET or AUTH_GITHUB_ID/AUTH_GITHUB_SECRET.
+          </p>
+        </div>
+      )}
+    </div>
+    
+    <div class="mt-8 text-center">
+      <a href="/" class="text-blue-600 hover:text-blue-800 underline">
+        ← Back to Home
+      </a>
+    </div>
+    
+    <!-- Demo login for testing -->
+    <div class="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+      <h3 class="font-semibold mb-2">Demo Mode</h3>
+      <p class="text-sm text-gray-600 mb-3">
+        For testing purposes, you can simulate authentication:
+      </p>
+      <a 
+        href="/?auth=success" 
+        class="inline-block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
+      >
+        🎭 Simulate Login
+      </a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    max-width: 400px;
+  }
+</style>

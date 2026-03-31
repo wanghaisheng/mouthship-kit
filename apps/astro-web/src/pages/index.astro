@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro'
+import ThemeSwitcher from '../components/ThemeSwitcher.astro'
+import ShowToast from '../components/ShowToast.astro'
+import UploadExample from '../components/UploadExample.astro'
+import { api } from '../lib/trpc/server'
+
+// Check authentication status
+const url = Astro.url
+const searchParams = url.searchParams
+const authStatus = searchParams.get('auth')
+
+// Mock user data - will be replaced with real auth
+const user = authStatus === 'success' ? {
+  id: 'demo-user-123',
+  name: 'Demo User',
+  email: 'demo@example.com',
+  avatarUrl: '/images/demo-avatar.png'
+} : null
+
+// Redirect to login if not authenticated
+if (!user) {
+  return Astro.redirect('/login')
+}
+
+// Call tRPC API
+const hello = await api.hello.protected()
+---
+
+<Layout title="Mouthship Kit - Astro Web (Authenticated)">
+  <main class="container mx-auto p-6">
+    {authStatus === 'success' && (
+      <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded">
+        <p class="text-green-800">✅ Successfully signed in!</p>
+      </div>
+    )}
+    
+    <div class="flex min-h-[37.8px] items-center justify-between mb-6">
+      <h1 class="text-2xl font-bold">Astro app (migrated from Next.js), your user id is {user.id}</h1>
+      <ThemeSwitcher />
+    </div>
+    
+    <div class="mb-6">
+      <!-- User profile -->
+      <div class="flex items-center space-x-4">
+        <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">
+          {user.name
+            ?.split(' ')
+            .map((w) => w[0])
+            .join('')}
+        </div>
+        <div>
+          <p class="font-semibold">{user.name}</p>
+          <p class="text-sm text-gray-600">{user.email}</p>
+        </div>
+      </div>
+    </div>
+    
+    <form method="POST" action="/api/logout" class="mb-6">
+      <button type="submit" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">
+        Logout
+      </button>
+    </form>
+    
+    <div class="mb-6">
+      <ShowToast />
+    </div>
+    
+    <div class="mb-6">
+      <UploadExample />
+    </div>
+    
+    <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded">
+      <h3 class="font-semibold mb-2">tRPC API Response</h3>
+      <p class="text-sm text-blue-800">{hello.message}</p>
+      <p class="text-xs text-blue-600 mt-1">Source: {hello.source}</p>
+    </div>
+    
+    <div class="mt-8 p-6 bg-green-50 border border-green-200 rounded">
+      <h2 class="text-xl font-semibold mb-4">Migration Status</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>✅ Basic Astro setup</li>
+        <li>✅ Layout component</li>
+        <li>✅ Page structure</li>
+        <li>✅ Auth pages (login, github, google, callback)</li>
+        <li>✅ Auth flow (login → callback → home)</li>
+        <li>✅ Error pages (error, blocked)</li>
+        <li>✅ UI components (ThemeSwitcher, ShowToast, UploadExample)</li>
+        <li>✅ API routes (tRPC, UploadThing, logout)</li>
+        <li>✅ Styling (Tailwind) </li>
+        <li>✅ tRPC server integration</li>
+        <li>✅ Session management</li>
+        <li>⏳ Real auth integration (pending dependencies)</li>
+      </ul>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    max-width: 1200px;
+  }
+</style>

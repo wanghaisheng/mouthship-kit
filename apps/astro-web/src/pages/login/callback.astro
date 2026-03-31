@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+// Mock authentication callback handler
+const url = Astro.url
+const searchParams = url.searchParams
+const provider = searchParams.get('provider')
+const code = searchParams.get('code')
+const state = searchParams.get('state')
+const error = searchParams.get('error')
+
+// Handle OAuth callback
+if (error) {
+  // Redirect to login with error
+  return Astro.redirect(`/login?error=${encodeURIComponent(error)}`)
+}
+
+if (code && provider) {
+  // Mock OAuth success - in real implementation, this would:
+  // 1. Exchange code for access token
+  // 2. Get user profile from provider
+  // 3. Create/update user in database
+  // 4. Create session
+  // 5. Redirect to home
+  
+  console.log(`OAuth callback for ${provider}:`, { code: code.substring(0, 10) + '...', state })
+  
+  // Mock successful authentication
+  return Astro.redirect('/?auth=success')
+}
+
+// If no code or error, redirect to login
+return Astro.redirect('/login')
+---
+
+<Layout title="Authentication Callback">
+  <main class="container mx-auto flex flex-col items-center justify-center p-6 min-h-[60vh]">
+    <div class="text-center">
+      <div class="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4"></div>
+      <h1 class="text-xl font-semibold mb-2">Processing authentication...</h1>
+      <p class="text-gray-600">Please wait while we complete your sign-in.</p>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+</style>

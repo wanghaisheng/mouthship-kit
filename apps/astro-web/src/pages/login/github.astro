@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro'
+// Note: This import will be available once dependencies are installed
+// import { createGithubAuthorizationURL } from '@mouthshipkit/auth/providers/github'
+
+// Mock GitHub auth URL - will be replaced with real implementation
+const githubAuthUrl = 'https://github.com/login/oauth/authorize?client_id=mock_client_id'
+
+// For now, redirect to GitHub OAuth
+// In real implementation: const githubAuthUrl = await createGithubAuthorizationURL()
+---
+
+<Layout title="GitHub Login - Mouthship Kit">
+  <main class="container mx-auto p-6 text-center">
+    <div class="max-w-md mx-auto">
+      <h1 class="text-2xl font-bold mb-6">Signing in with GitHub</h1>
+      
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <p class="mb-4 text-gray-600">
+          You will be redirected to GitHub to authorize this application.
+        </p>
+        
+        <a 
+          href={githubAuthUrl}
+          class="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+        >
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-.713-.713-1.65-.713-1.65 0-1.167.392-2.138.713-2.138.713 0 .802.574 1.468 1.332 1.658.349.059.698.09 1.049.09.375 0 .747-.041 1.083-.135.72-.37 1.359-.653 1.658-.653.969 0 1.371-.872 1.937-2.06 1.079-.765.208-1.23.208-1.23.618-.415 1.379-.665 2.138-.765 1.798 0 3.173-1.375 3.173-3.173 0-1.86-1.375-3.173-3.173-3.173z"/>
+          </svg>
+          Continue with GitHub
+        </a>
+      </div>
+      
+      <div class="mt-6">
+        <a href="/login" class="text-blue-600 hover:text-blue-800 underline">
+          ← Back to Login Options
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    max-width: 500px;
+  }
+</style>

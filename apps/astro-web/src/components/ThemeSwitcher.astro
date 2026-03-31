@@ -1,0 +1,38 @@
+---
+// Theme switcher component for Astro
+// Note: This will need next-themes integration once dependencies are installed
+---
+
+<select class="rounded-md border border-gray-300 bg-gray-50 text-sm transition-colors hover:bg-gray-100 p-2">
+  <option value="system">System</option>
+  <option value="dark">Dark</option>
+  <option value="light">Light</option>
+</select>
+
+<script>
+  // Theme switching logic will be added once next-themes is available
+  const select = document.querySelector('select');
+  
+  select?.addEventListener('change', (e) => {
+    const theme = e.target.value;
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  });
+  
+  // Set initial theme
+  const savedTheme = localStorage.getItem('theme') || 'system';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  select.value = savedTheme;
+</script>
+
+<style>
+  select {
+    width: 120px;
+  }
+  
+  [data-theme="dark"] select {
+    background-color: #374151;
+    color: white;
+    border-color: #4b5563;
+  }
+</style>
