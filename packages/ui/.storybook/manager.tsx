@@ -1,5 +1,5 @@
-import '@orbitkit/assets/fonts/stylesheet.css'
+import '@mouthshipkit/assets/fonts/stylesheet.css'
 
-import { registerAddons } from '@orbitkit/storybook/manager'
+import { registerAddons } from '@mouthshipkit/storybook/manager'
 
 registerAddons()

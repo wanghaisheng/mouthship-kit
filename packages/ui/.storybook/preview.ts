@@ -1,6 +1,6 @@
-import '@orbitkit/assets/fonts/stylesheet.css'
+import '@mouthshipkit/assets/fonts/stylesheet.css'
 import './globals.css'
 
-import preview from '@orbitkit/storybook/preview'
+import preview from '@mouthshipkit/storybook/preview'
 
 export default preview

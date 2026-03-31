@@ -2,9 +2,9 @@
   "name": "@mouthshipkit/marketing",
   "version": "0.4.3",
   "private": true,
-  "description": "Marketing website for OrbitKit",
+  "description": "Marketing website for mouthshipkit",
   "license": "MIT",
-  "author": "OrbitKit",
+  "author": "mouthshipkit",
   "type": "module",
   "scripts": {
     "build": "astro check && astro build",

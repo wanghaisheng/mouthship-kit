@@ -114,7 +114,7 @@ function categorizeDependencies(deps) {
 }
 
 function main() {
-  console.log('📊 OrbitKit 依赖分析报告\n');
+  console.log('📊 mouthshipkit 依赖分析报告\n');
   
   const deps = analyzeDependencies();
   const categories = categorizeDependencies(deps);

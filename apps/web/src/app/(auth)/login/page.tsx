@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
-import { auth } from '@orbitkit/auth'
-import { env } from '@orbitkit/env/web/server'
+import { auth } from '@mouthshipkit/auth'
+import { env } from '@mouthshipkit/env/web/server'
 
 const googleAuthIsEnabled =
   env.AUTH_GOOGLE_ID !== undefined && env.AUTH_GOOGLE_SECRET !== undefined

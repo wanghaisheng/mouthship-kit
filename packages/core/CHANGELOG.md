@@ -1,4 +1,4 @@
-# @orbitkit/core
+# @mouthshipkit/core
 
 ## 0.4.3
 

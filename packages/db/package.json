@@ -4,7 +4,7 @@
   "private": true,
   "description": "A database package utilizing drizzle orm.",
   "license": "MIT",
-  "author": "OrbitKit",
+  "author": "mouthshipkit",
   "sideEffects": false,
   "type": "module",
   "exports": {

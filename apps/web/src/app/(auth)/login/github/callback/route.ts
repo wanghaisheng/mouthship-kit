@@ -1,3 +1,3 @@
-import { validateGithubCallback } from '@orbitkit/auth/providers/github'
+import { validateGithubCallback } from '@mouthshipkit/auth/providers/github'
 
 export { validateGithubCallback as GET }

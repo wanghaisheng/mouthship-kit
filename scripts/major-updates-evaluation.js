@@ -164,7 +164,7 @@ function generateUpgradeRecommendation(updates) {
 
 // 主函数
 function main() {
-  console.log('🔍 OrbitKit 第三阶段：大版本更新评估\n');
+  console.log('🔍 mouthshipkit 第三阶段：大版本更新评估\n');
   
   const packages = ['react', 'next', 'typescript'];
   const updates = [];

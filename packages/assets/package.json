@@ -2,9 +2,9 @@
   "name": "@mouthshipkit/assets",
   "version": "0.4.3",
   "private": true,
-  "description": "OrbitKit's assets package",
+  "description": "mouthshipkit's assets package",
   "license": "MIT",
-  "author": "OrbitKit",
+  "author": "mouthshipkit",
   "files": [
     "**/*"
   ]

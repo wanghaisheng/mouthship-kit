@@ -2,8 +2,8 @@ import { initTRPC, TRPCError } from '@trpc/server'
 import superjson from 'superjson'
 import { ZodError } from 'zod'
 
-import { auth } from '@orbitkit/auth'
-import { db } from '@orbitkit/db'
+import { auth } from '@mouthshipkit/auth'
+import { db } from '@mouthshipkit/db'
 
 export const createTRPCContext = async (opts: { headers: Headers }) => {
   const { session, user } = await auth()

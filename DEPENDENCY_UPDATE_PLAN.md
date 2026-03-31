@@ -1,4 +1,4 @@
-# OrbitKit 依赖更新计划
+# mouthshipkit 依赖更新计划
 
 ## 📊 当前状态概览
 

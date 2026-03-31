@@ -8,8 +8,8 @@ import { createTRPCReact } from '@trpc/react-query'
 import { type inferRouterInputs, type inferRouterOutputs } from '@trpc/server'
 import superjson from 'superjson'
 
-import { type AppRouter } from '@orbitkit/api'
-import { getBaseUrl } from '@orbitkit/utils/url'
+import { type AppRouter } from '@mouthshipkit/api'
+import { getBaseUrl } from '@mouthshipkit/utils/url'
 
 const createQueryClient = () => new QueryClient()
 

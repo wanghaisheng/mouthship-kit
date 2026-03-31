@@ -1,6 +1,6 @@
 import { PostHog } from 'posthog-node'
 
-import { env } from '@orbitkit/env/web/client'
+import { env } from '@mouthshipkit/env/web/client'
 
 /**
  * This component is used to initialize posthog client.

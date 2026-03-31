@@ -1,4 +1,4 @@
-# @orbitkit/eslint
+# @mouthshipkit/eslint
 
 ## 0.4.3
 

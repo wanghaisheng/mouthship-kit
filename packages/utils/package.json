@@ -2,9 +2,9 @@
   "name": "@mouthshipkit/utils",
   "version": "0.4.3",
   "private": true,
-  "description": "Common utilities for OrbitKit",
+  "description": "Common utilities for mouthshipkit",
   "license": "MIT",
-  "author": "OrbitKit",
+  "author": "mouthshipkit",
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@mouthshipkit/eslint": "workspace:^",
-    "@mouthshipkit/tsconfig": "workspace:^"
+    "@mouthshipkit/tsconfig": "workspace:^",
+    "@types/node": "^20.0.0"
   }
 }

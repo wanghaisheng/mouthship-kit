@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 
-import { orbitKitTailwindPreset } from '@orbitkit/tailwind'
+import { mouthshipkitTailwindPreset } from '@mouthshipkit/tailwind'
 
 const config: Config = {
   content: [
@@ -8,7 +8,7 @@ const config: Config = {
     '../../packages/ui/dist/**/*.js',
   ],
   darkMode: 'class',
-  presets: [orbitKitTailwindPreset],
+  presets: [mouthshipkitTailwindPreset],
 }
 
 export default config

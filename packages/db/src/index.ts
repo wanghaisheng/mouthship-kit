@@ -1,6 +1,6 @@
 import { drizzle } from 'drizzle-orm/better-sqlite3'
 
-import { env } from '@orbitkit/env/web/db'
+import { env } from '@mouthshipkit/env/web/db'
 
 import * as schema from './schema'
 

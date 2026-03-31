@@ -6,7 +6,7 @@ import { join } from 'path';
 
 const workspaceRoot = process.cwd();
 
-console.log('🧪 OrbitKit 更新后测试检查\n');
+console.log('🧪 mouthshipkit 更新后测试检查\n');
 
 // 检查依赖是否正确安装
 function checkDependencies() {

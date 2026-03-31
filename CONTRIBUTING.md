@@ -1,6 +1,6 @@
-# Contributing to Orbitkit
+# Contributing to mouthshipkit
 
-Thank you for considering contributing to Orbitkit :tada:
+Thank you for considering contributing to mouthshipkit :tada:
 
 ## How to Contribute
 
@@ -99,4 +99,4 @@ By contributing to this project, you agree that your contributions will be licen
 
 If you have any suggestions or concerns, consider opening a new issue.
 
-**[Orbitkit](https://github.com/ixahmedxi/orbitkit/issues)**
+**[mouthshipkit](https://github.com/ixahmedxi/mouthshipkit/issues)**

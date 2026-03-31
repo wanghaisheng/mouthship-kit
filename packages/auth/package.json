@@ -2,9 +2,9 @@
   "name": "@mouthshipkit/auth",
   "version": "0.4.3",
   "private": true,
-  "description": "Auth package for OrbitKit",
+  "description": "Auth package for mouthshipkit",
   "license": "MIT",
-  "author": "OrbitKit",
+  "author": "mouthshipkit",
   "sideEffects": false,
   "type": "module",
   "exports": {

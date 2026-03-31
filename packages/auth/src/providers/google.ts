@@ -5,10 +5,10 @@ import { generateId } from 'lucia'
 import { z } from 'zod'
 import { and, eq } from 'drizzle-orm'
 
-import { db } from '@orbitkit/db'
-import { oauthAccountTable, userTable } from '@orbitkit/db/schema'
-import { env } from '@orbitkit/env/web/server'
-import { getBaseUrl } from '@orbitkit/utils/url'
+import { db } from '@mouthshipkit/db'
+import { oauthAccountTable, userTable } from '@mouthshipkit/db/schema'
+import { env } from '@mouthshipkit/env/web/server'
+import { getBaseUrl } from '@mouthshipkit/utils/url'
 
 import { lucia } from '../lucia'
 

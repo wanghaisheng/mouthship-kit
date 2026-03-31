@@ -4,9 +4,9 @@ import { generateState, GitHub, OAuth2RequestError } from 'arctic'
 import { generateId } from 'lucia'
 import { and, eq } from 'drizzle-orm'
 
-import { db } from '@orbitkit/db'
-import { oauthAccountTable, userTable } from '@orbitkit/db/schema'
-import { env } from '@orbitkit/env/web/server'
+import { db } from '@mouthshipkit/db'
+import { oauthAccountTable, userTable } from '@mouthshipkit/db/schema'
+import { env } from '@mouthshipkit/env/web/server'
 
 import { lucia } from '../lucia'
 

@@ -157,7 +157,7 @@ function performMinorUpdates() {
 
 // 主函数
 function main() {
-  console.log('🔧 OrbitKit 第二阶段：小版本更新\n');
+  console.log('🔧 mouthshipkit 第二阶段：小版本更新\n');
   
   try {
     performMinorUpdates();

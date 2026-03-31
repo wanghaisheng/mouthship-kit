@@ -172,7 +172,7 @@ console.log('3. 手动更新大版本依赖');
 }
 
 function main() {
-  console.log('🔍 OrbitKit 依赖健康检查\n');
+  console.log('🔍 mouthshipkit 依赖健康检查\n');
   
   const outdatedDeps = checkOutdated();
   const securityAudit = checkSecurity();

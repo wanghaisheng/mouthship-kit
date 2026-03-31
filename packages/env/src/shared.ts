@@ -8,6 +8,6 @@ export const sharedEnv = createEnv({
     NODE_ENV: z.enum(['development', 'test', 'production']).optional(),
   },
   runtimeEnv: {
-    NODE_ENV: process.env.NODE_ENV,
+    NODE_ENV: process.env.NODE_ENV || 'development',
   },
 })

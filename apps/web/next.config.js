@@ -6,8 +6,8 @@ import createJiti from 'jiti'
 
 const jiti = createJiti(fileURLToPath(import.meta.url))
 
-jiti('@orbitkit/env/web/server')
-jiti('@orbitkit/env/web/client')
+jiti('@mouthshipkit/env/web/server')
+jiti('@mouthshipkit/env/web/client')
 
 const withBundleAnalyzer = bundleAnalyzerPlugin({
   enabled: process.env['ANALYZE'] === 'true',
@@ -16,7 +16,7 @@ const withBundleAnalyzer = bundleAnalyzerPlugin({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ['@orbitkit/env'],
+  transpilePackages: ['@mouthshipkit/env'],
   eslint: {
     ignoreDuringBuilds: true,
   },

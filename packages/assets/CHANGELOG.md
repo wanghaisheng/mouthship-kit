@@ -1,4 +1,4 @@
-# @orbitkit/assets
+# @mouthshipkit/assets
 
 ## 0.4.3
 

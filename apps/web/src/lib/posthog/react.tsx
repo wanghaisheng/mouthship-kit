@@ -3,7 +3,7 @@
 import posthog from 'posthog-js'
 import { PostHogProvider } from 'posthog-js/react'
 
-import { env } from '@orbitkit/env/web/client'
+import { env } from '@mouthshipkit/env/web/client'
 
 if (
   typeof window !== 'undefined' &&

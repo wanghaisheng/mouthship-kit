@@ -1,6 +1,6 @@
 import * as Sentry from '@sentry/nextjs'
 
-import { env } from '@orbitkit/env/web/client'
+import { env } from '@mouthshipkit/env/web/client'
 
 Sentry.init({
   dsn: env.NEXT_PUBLIC_SENTRY_DSN,

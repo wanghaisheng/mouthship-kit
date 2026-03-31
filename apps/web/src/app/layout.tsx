@@ -8,7 +8,7 @@ import { GeistSans } from 'geist/font/sans'
 import { ThemeProvider } from 'next-themes'
 import { extractRouterConfig } from 'uploadthing/server'
 
-import { Toaster } from '@orbitkit/ui/toast'
+import { Toaster } from '@mouthshipkit/ui/toast'
 
 import { PostHogReactProvider } from '@/lib/posthog/react'
 import { TRPCReactProvider } from '@/lib/trpc/react'

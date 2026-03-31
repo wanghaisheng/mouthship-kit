@@ -157,7 +157,7 @@ function performPatchUpdates() {
 
 // 主函数
 function main() {
-  console.log('🔒 OrbitKit 第一阶段：安全补丁更新\n');
+  console.log('🔒 mouthshipkit 第一阶段：安全补丁更新\n');
   
   try {
     performPatchUpdates();

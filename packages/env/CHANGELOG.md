@@ -1,4 +1,4 @@
-# @orbitkit/env
+# @mouthshipkit/env
 
 ## 0.4.3
 

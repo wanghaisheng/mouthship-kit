@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "OrbitKit",
+  "name": "mouthshipkit",
   "logo": {
-    "dark": "/logo/orbitkit-dark.svg",
-    "light": "/logo/orbitkit-light.svg"
+    "dark": "/logo/mouthshipkit-dark.svg",
+    "light": "/logo/mouthshipkit-light.svg"
   },
-  "favicon": "/orbitkit-favicon.svg",
+  "favicon": "/mouthshipkit-favicon.svg",
   "colors": {
     "primary": "#202020",
     "light": "#EEEEEE",
@@ -25,7 +25,7 @@
     {
       "name": "Github",
       "icon": "github",
-      "url": "https://github.com/ixahmedxi/orbitkit"
+      "url": "https://github.com/ixahmedxi/mouthshipkit"
     },
     {
       "name": "X / Twitter",
@@ -54,6 +54,6 @@
   ],
   "footerSocials": {
     "twitter": "https://twitter.com/ixahmedxii",
-    "github": "https://github.com/ixahmedxi/orbitkit"
+    "github": "https://github.com/ixahmedxi/mouthshipkit"
   }
 }

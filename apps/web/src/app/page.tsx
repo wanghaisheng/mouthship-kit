@@ -1,8 +1,8 @@
 import { redirect } from 'next/navigation'
 
-import { auth } from '@orbitkit/auth'
-import { logout } from '@orbitkit/auth/actions/logout'
-import { Avatar, AvatarFallback, AvatarImage } from '@orbitkit/ui/avatar'
+import { auth } from '@mouthshipkit/auth'
+import { logout } from '@mouthshipkit/auth/actions/logout'
+import { Avatar, AvatarFallback, AvatarImage } from '@mouthshipkit/ui/avatar'
 
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import { api } from '@/lib/trpc/server'

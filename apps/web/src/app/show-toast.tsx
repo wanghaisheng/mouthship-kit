@@ -1,7 +1,7 @@
 'use client'
 
-import { Button } from '@orbitkit/ui/button'
-import { useToast } from '@orbitkit/ui/toast'
+import { Button } from '@mouthshipkit/ui/button'
+import { useToast } from '@mouthshipkit/ui/toast'
 
 export const ShowToast = () => {
   const { toast } = useToast()

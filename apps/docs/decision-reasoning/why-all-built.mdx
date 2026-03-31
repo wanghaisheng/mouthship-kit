@@ -67,7 +67,7 @@ Typically, a package using this approach would be called a "Publishable Package"
 - **Slower build step**: Because bundling not only transpiles your code from TS to JS, but it also does many optimisations like tree-shaking, minification, etc. This makes the build step slower than just transpiling the code, even with `tsup` which is very fast we have seen pure `tsc` being much faster just because it avoids that bundling step.
 - **Hard to get go to definition**: It's notoriously more difficult to get go to definition and other features in your editor with bundled code.
 
-## The OrbitKit Approach
+## The mouthshipkit Approach
 
 - `ui package` is bundled with `vite`.
 - `env package` is shipped out as source code.
@@ -89,7 +89,7 @@ To minimise the amount of processes running during dev we can do something like:
 This looks something like this, if we were to be making api changes for example:
 
 ```bash
-bun turbo dev --filter=@orbitkit/web... --filter=!./packages/config/* --filter=!@orbitkit/ui --only
+bun turbo dev --filter=@mouthshipkit/web... --filter=!./packages/config/* --filter=!@mouthshipkit/ui --only
 ```
 
 It is true that this is a really long command, but we can make it shorter by adding it to the root `package.json` scripts like so:
@@ -97,7 +97,7 @@ It is true that this is a really long command, but we can make it shorter by add
 ```json
 {
   "scripts": {
-    "dev:web:api": "bun turbo dev --filter=@orbitkit/web... --filter=!./packages/config/* --filter=!@orbitkit/ui --only"
+    "dev:web:api": "bun turbo dev --filter=@mouthshipkit/web... --filter=!./packages/config/* --filter=!@mouthshipkit/ui --only"
   }
 }
 ```

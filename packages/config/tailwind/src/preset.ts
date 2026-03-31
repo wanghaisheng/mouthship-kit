@@ -10,7 +10,7 @@ import { type Config } from 'tailwindcss'
 
 const colors = createPlugin()
 
-export const orbitKitTailwindPreset: Config = {
+export const mouthshipkitTailwindPreset: Config = {
   content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
   presets: [windyTypography],
   theme: {

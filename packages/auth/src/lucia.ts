@@ -1,9 +1,9 @@
 import { DrizzleSQLiteAdapter } from '@lucia-auth/adapter-drizzle'
 import { Lucia } from 'lucia'
 
-import { db } from '@orbitkit/db'
-import { sessionTable, userTable } from '@orbitkit/db/schema'
-import { env } from '@orbitkit/env/web/server'
+import { db } from '@mouthshipkit/db'
+import { sessionTable, userTable } from '@mouthshipkit/db/schema'
+import { env } from '@mouthshipkit/env/web/server'
 
 const adapter = new DrizzleSQLiteAdapter(db, sessionTable, userTable)
 

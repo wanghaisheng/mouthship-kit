@@ -1,5 +1,5 @@
 {
-  "extends": ["@orbitkit/tsconfig/react.json"],
+  "extends": ["@mouthshipkit/tsconfig/react.json"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

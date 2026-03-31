@@ -3,7 +3,7 @@ import type { FileRouter } from 'uploadthing/next'
 import { createUploadthing } from 'uploadthing/next'
 import { UploadThingError } from 'uploadthing/server'
 
-import { auth } from '@orbitkit/auth'
+import { auth } from '@mouthshipkit/auth'
 
 const f = createUploadthing()
 

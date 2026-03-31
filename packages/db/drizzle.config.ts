@@ -1,6 +1,6 @@
 import type { Config } from 'drizzle-kit'
 
-import { env } from '@orbitkit/env/web/db'
+import { env } from '@mouthshipkit/env/web/db'
 
 export default {
   dialect: 'sqlite',

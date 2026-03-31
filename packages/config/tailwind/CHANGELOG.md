@@ -1,4 +1,4 @@
-# @orbitkit/tailwind
+# @mouthshipkit/tailwind
 
 ## 0.4.3
 

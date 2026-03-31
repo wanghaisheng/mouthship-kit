@@ -1,4 +1,4 @@
-import { buildConfig, mergeConfig, reactConfig } from '@orbitkit/vite'
+import { buildConfig, mergeConfig, reactConfig } from '@mouthshipkit/vite'
 
 import pkg from './package.json'
 

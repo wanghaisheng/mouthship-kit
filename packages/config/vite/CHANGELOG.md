@@ -1,4 +1,4 @@
-# @orbitkit/vite
+# @mouthshipkit/vite
 
 ## 0.4.3
 

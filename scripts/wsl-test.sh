@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🧪 OrbitKit WSL 测试脚本"
+echo "🧪 mouthshipkit WSL 测试脚本"
 
 # 检查环境
 echo "📋 环境检查:"

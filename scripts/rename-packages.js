@@ -13,7 +13,7 @@ function renamePackage(dir, type) {
   
   // Rename package name
   if (packageJson.name) {
-    packageJson.name = packageJson.name.replace('@orbitkit/', '@mouthshipkit/')
+    packageJson.name = packageJson.name.replace('@mouthshipkit/', '@mouthshipkit/')
     console.log(`Renamed ${type}: ${packageJson.name}`)
   }
   
@@ -21,8 +21,8 @@ function renamePackage(dir, type) {
   ['dependencies', 'devDependencies', 'peerDependencies'].forEach(depType => {
     if (packageJson[depType]) {
       Object.keys(packageJson[depType]).forEach(key => {
-        if (key.startsWith('@orbitkit/')) {
-          const newKey = key.replace('@orbitkit/', '@mouthshipkit/')
+        if (key.startsWith('@mouthshipkit/')) {
+          const newKey = key.replace('@mouthshipkit/', '@mouthshipkit/')
           packageJson[depType][newKey] = packageJson[depType][key]
           delete packageJson[depType][key]
         }
@@ -34,10 +34,10 @@ function renamePackage(dir, type) {
   if (packageJson.exports) {
     Object.keys(packageJson.exports).forEach(key => {
       if (typeof packageJson.exports[key] === 'object' && packageJson.exports[key].types) {
-        packageJson.exports[key].types = packageJson.exports[key].types.replace('@orbitkit/', '@mouthshipkit/')
+        packageJson.exports[key].types = packageJson.exports[key].types.replace('@mouthshipkit/', '@mouthshipkit/')
       }
       if (typeof packageJson.exports[key] === 'object' && packageJson.exports[key].default) {
-        packageJson.exports[key].default = packageJson.exports[key].default.replace('@orbitkit/', '@mouthshipkit/')
+        packageJson.exports[key].default = packageJson.exports[key].default.replace('@mouthshipkit/', '@mouthshipkit/')
       }
     })
   }
@@ -68,15 +68,15 @@ const rootPackageJson = JSON.parse(readFileSync(rootPackageJsonPath, 'utf8'))
 // Update workspaces
 if (rootPackageJson.workspaces) {
   rootPackageJson.workspaces = rootPackageJson.workspaces.map(ws => 
-    ws.replace('@orbitkit/', '@mouthshipkit/')
+    ws.replace('@mouthshipkit/', '@mouthshipkit/')
   )
 }
 
 // Update lint-staged config
 if (rootPackageJson['lint-staged']) {
   Object.keys(rootPackageJson['lint-staged']).forEach(key => {
-    if (key.includes('@orbitkit/')) {
-      const newKey = key.replace('@orbitkit/', '@mouthshipkit/')
+    if (key.includes('@mouthshipkit/')) {
+      const newKey = key.replace('@mouthshipkit/', '@mouthshipkit/')
       rootPackageJson['lint-staged'][newKey] = rootPackageJson['lint-staged'][key]
       delete rootPackageJson['lint-staged'][key]
     }
@@ -103,9 +103,9 @@ function updateImportsInDir(dir, pattern) {
       try {
         const content = readFileSync(file, 'utf8')
         const updatedContent = content
-          .replace(/from ['"]@orbitkit\//g, "from '@mouthshipkit/")
-          .replace(/import ['"]@orbitkit\//g, "import '@mouthshipkit/")
-          .replace(/@orbitkit\//g, '@mouthshipkit/')
+          .replace(/from ['"]@mouthshipkit\//g, "from '@mouthshipkit/")
+          .replace(/import ['"]@mouthshipkit\//g, "import '@mouthshipkit/")
+          .replace(/@mouthshipkit\//g, '@mouthshipkit/')
         
         if (content !== updatedContent) {
           writeFileSync(file, updatedContent)

@@ -1,4 +1,4 @@
-# @orbitkit/tsconfig
+# @mouthshipkit/tsconfig
 
 ## 0.4.3
 

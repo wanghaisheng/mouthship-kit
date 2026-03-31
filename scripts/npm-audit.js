@@ -56,7 +56,7 @@ function createTempPackageForAudit() {
   const externalDeps = getAllExternalDependencies();
   
   const tempPackageJson = {
-    name: "orbitkit-temp-audit",
+    name: "mouthshipkit-temp-audit",
     version: "1.0.0",
     private: true,
     dependencies: {}
@@ -103,7 +103,7 @@ function cleanupTempFile() {
 
 // 主函数
 function main() {
-  console.log('🔒 OrbitKit 安全检查');
+  console.log('🔒 mouthshipkit 安全检查');
   console.log('由于使用 workspace 协议，创建临时包进行安全检查...\n');
   
   try {

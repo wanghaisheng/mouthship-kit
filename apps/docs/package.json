@@ -2,9 +2,9 @@
   "name": "@mouthshipkit/docs",
   "version": "0.4.3",
   "private": true,
-  "description": "Documentation website for OrbitKit using Mintlify",
+  "description": "Documentation website for mouthshipkit using Mintlify",
   "license": "MIT",
-  "author": "OrbitKit",
+  "author": "mouthshipkit",
   "type": "module",
   "scripts": {
     "dev": "mintlify dev --port=3002"

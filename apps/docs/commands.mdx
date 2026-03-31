@@ -5,7 +5,7 @@ description: 'A guide on the available commands in the project, what they do and
 ---
 
 <Note>
-  OrbitKit uses Turborepo to run commands across apps & packages in the
+  mouthshipkit uses Turborepo to run commands across apps & packages in the
   monorepo, you can also use `bun --filter` commands to do the same without
   dependant tasks running or caching.
 </Note>
@@ -20,7 +20,7 @@ The `dev` command starts up all of the apps in the monorepo in development mode 
 
 The `dev` command also applies Drizzle ORM schema migrations to the database, it will generate any missing migrations and apply them to the database.
 
-You can start up for example only the web application by using `bun turbo dev --filter=@orbitkit/web`.
+You can start up for example only the web application by using `bun turbo dev --filter=@mouthshipkit/web`.
 
 ## `build`
 
@@ -30,7 +30,7 @@ bun turbo build
 
 The `build` command builds all of the apps in the monorepo and also builds the packages that need bundling.
 
-You can build for example only the web application by using `bun turbo build --filter=@orbitkit/web`.
+You can build for example only the web application by using `bun turbo build --filter=@mouthshipkit/web`.
 
 ## `start`
 
@@ -90,6 +90,6 @@ The `db:migrate` command will apply all of the schema migrations to the database
 
 ## Database Commands
 
-OrbitKit supports all of [DrizzleKit's commands](https://orm.drizzle.team/kit-docs/commands) which are all configured for you in the `packages/db/package.json` file.
+mouthshipkit supports all of [DrizzleKit's commands](https://orm.drizzle.team/kit-docs/commands) which are all configured for you in the `packages/db/package.json` file.
 
-You can invoke these commands using `bun`, for example to check for collisions and inconsistencies between your database and the schema, you can run `bun --filter @orbitkit/db db:check`.
+You can invoke these commands using `bun`, for example to check for collisions and inconsistencies between your database and the schema, you can run `bun --filter @mouthshipkit/db db:check`.
