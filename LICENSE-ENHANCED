@@ -1,0 +1,51 @@
+MIT License
+
+Copyright (c) 2024 Ahmed Elsakaan (Original Orbitkit)
+Copyright (c) 2025 wanghaisheng (Enhanced Mouthship Kit)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Attribution Notice
+
+This enhanced version is based on the original Orbitkit project by Ahmed Elsakaan.
+Significant improvements and additions have been made including:
+
+- Updated all dependencies to latest versions
+- Added Vinext support for Cloudflare deployment
+- Created new Astro-based web application
+- Implemented comprehensive test suite
+- Added Bun package manager support
+- Enhanced documentation and guides
+
+Original project: https://github.com/ixahmedxi/orbitkit
+Enhanced project: https://github.com/wanghaisheng/mouthship-kit
+
+## Third-Party Licenses
+
+This project incorporates third-party components with their respective licenses:
+
+- Orbitkit (MIT License) - Original foundation
+- Vinext (MIT License) - Cloudflare compatibility
+- Astro (MIT License) - Modern web framework
+- All other dependencies as listed in package.json
+
+For a complete list of dependencies and their licenses, please refer to the
+package.json files in each respective package and application directory.
