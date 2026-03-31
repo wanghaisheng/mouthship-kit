@@ -1,0 +1,9 @@
+name = "mouthship-kit-web"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "mouthship-kit-web-prod"
+
+[env.staging]
+name = "mouthship-kit-web-staging"
